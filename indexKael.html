@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Espaço do Cidadão — Milton Santos</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 23px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            font-size: 18px;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .controles {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #222;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #status {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .termo {
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p,
+            ul {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="controles">
+            <button onclick="iniciarLeitura()">🔊 Ouvir texto</button>
+            <button onclick="pararLeitura()">⏹ Parar</button>
+        </div>
+
+        <div id="status">
+            Clique em "Ouvir texto" para começar.
+        </div>
+
+        <h1>
+            O ESPAÇO DO CIDADÃO
+        </h1>
+
+        <h2>O Espaço do Cidadão — Milton Santos</h2>
+
+        <p>
+            Publicado em 1987, O Espaço do Cidadão analisa a relação entre o território e a cidadania. Para Milton Santos, ser cidadão vai além de possuir direitos previstos na lei: exige a possibilidade concreta de exercê-los na vida cotidiana, como o acesso à moradia, saúde, educação, transporte e trabalho. Contudo, a distribuição desses serviços básicos varia muito entre diferentes regiões e bairros, fazendo com que o lugar onde uma pessoa mora determine as suas reais oportunidades e o seu valor social.
+        </p>
+
+        <p>
+            O território é o resultado das ações da sociedade, do Estado e do mercado. Por isso, a desigualdade social se reflete na organização das cidades: a localização de hospitais, escolas e transportes define quem tem mais ou menos acesso aos recursos essenciais. Assim, o espaço geográfico deixa de ser neutro e passa a influenciar diretamente na inclusão ou exclusão dos indivíduos.
+        </p>
+
+        <p>
+            O livro também critica a sobreposição do consumidor ao cidadão. Na sociedade atual, o poder de compra tornou-se condição para acessar bens que deveriam ser direitos de todos, aprofundando as disparidades entre as pessoas e os lugares. Essa lógica reforça a falsa ideia de que todos possuem as mesmas condições apenas por estarem sob uma garantia jurídica formal.
+        </p>
+
+        <p>
+            Por fim, o autor defende que a cidadania possui uma dimensão territorial. Lutar por direitos significa também lutar por uma distribuição mais justa dos recursos no espaço. A obra convida a olhar criticamente para o lugar onde se vive, mostrando que transformar a organização do espaço é fundamental para transformar a sociedade.
+        </p>
+
+        <h2>Principais termos</h2>
+
+        <ul>
+            <li>
+                <span class="termo">Cidadania:</span>
+                exercício efetivo de direitos, e não apenas sua existência na lei.
+            </li>
+
+            <li>
+                <span class="termo">Território:</span>
+                espaço usado e organizado pela sociedade, pelo Estado e pelo mercado.
+            </li>
+
+            <li>
+                <span class="termo">Consumidor versus cidadão:</span>
+                crítica à ideia de que o acesso a direitos depende da capacidade de consumo.
+            </li>
+
+            <li>
+                <span class="termo">Desigualdade territorial:</span>
+                diferença de acesso a bens e serviços entre os lugares.
+            </li>
+
+            <li>
+                <span class="termo">Localização:</span>
+                o lugar onde se vive influencia as oportunidades e os direitos de cada pessoa.
+            </li>
+
+            <li>
+                <span class="termo">Cidadania territorial:</span>
+                ideia de que a cidadania também depende de como o espaço é organizado.
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<script>
+
+const texto = `
+O Espaço do Cidadão — Milton Santos.
+
+Publicado em 1987, O Espaço do Cidadão analisa a relação entre o território e a cidadania.
+
+Para Milton Santos, ser cidadão vai além de possuir direitos previstos na lei: exige a possibilidade concreta de exercê-los na vida cotidiana, como o acesso à moradia, saúde, educação, transporte e trabalho.
+
+Contudo, a distribuição desses serviços básicos varia muito entre diferentes regiões e bairros, fazendo com que o lugar onde uma pessoa mora determine as suas reais oportunidades e o seu valor social.
+
+O território é o resultado das ações da sociedade, do Estado e do mercado.
+
+Por isso, a desigualdade social se reflete na organização das cidades: a localização de hospitais, escolas e transportes define quem tem mais ou menos acesso aos recursos essenciais.
+
+Assim, o espaço geográfico deixa de ser neutro e passa a influenciar diretamente na inclusão ou exclusão dos indivíduos.
+
+O livro também critica a sobreposição do consumidor ao cidadão.
+
+Na sociedade atual, o poder de compra tornou-se condição para acessar bens que deveriam ser direitos de todos, aprofundando as disparidades entre as pessoas e os lugares.
+
+Essa lógica reforça a falsa ideia de que todos possuem as mesmas condições apenas por estarem sob uma garantia jurídica formal.
+
+Por fim, o autor defende que a cidadania possui uma dimensão territorial.
+
+Lutar por direitos significa também lutar por uma distribuição mais justa dos recursos no espaço.
+
+A obra convida a olhar criticamente para o lugar onde se vive, mostrando que transformar a organização do espaço é fundamental para transformar a sociedade.
+
+Principais termos.
+
+Cidadania: exercício efetivo de direitos, e não apenas sua existência na lei.
+
+Território: espaço usado e organizado pela sociedade, pelo Estado e pelo mercado.
+
+Consumidor versus cidadão: crítica à ideia de que o acesso a direitos depende da capacidade de consumo.
+
+Desigualdade territorial: diferença de acesso a bens e serviços entre os lugares.
+
+Localização: o lugar onde se vive influencia as oportunidades e os direitos de cada pessoa.
+
+Cidadania territorial: ideia de que a cidadania também depende de como o espaço é organizado.
+`;
+
+function iniciarLeitura() {
+
+    if (!window.speechSynthesis) {
+        document.getElementById("status").textContent =
+            "Seu navegador não suporta leitura de texto.";
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+    fala.rate = 0.88;
+    fala.pitch = 1;
+
+    const vozes = speechSynthesis.getVoices();
+
+    let voz = vozes.find(function(v) {
+        return v.lang === "pt-BR";
+    });
+
+    if (!voz) {
+        voz = vozes.find(function(v) {
+            return v.lang.toLowerCase().startsWith("pt");
+        });
+    }
+
+    if (voz) {
+        fala.voice = voz;
+    }
+
+    fala.onstart = function() {
+        document.getElementById("status").textContent =
+            "🔊 Leitura em andamento...";
+    };
+
+    fala.onend = function() {
+        document.getElementById("status").textContent =
+            "✅ Leitura concluída.";
+    };
+
+    fala.onerror = function() {
+        document.getElementById("status").textContent =
+            "⚠️ Erro ao iniciar a leitura.";
+    };
+
+    speechSynthesis.speak(fala);
+}
+
+function pararLeitura() {
+
+    if (window.speechSynthesis) {
+        speechSynthesis.cancel();
+    }
+
+    document.getElementById("status").textContent =
+        "⏹ Leitura interrompida.";
+}
+
+</script>
+
+</body>
+</html>
